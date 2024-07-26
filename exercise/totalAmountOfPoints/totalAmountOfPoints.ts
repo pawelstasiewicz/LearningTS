@@ -19,13 +19,21 @@
 
 export function points(games: string[]): number {
 
-    let score:number
+    let score: number = 0
 
-    for(let i=0;i>=games.length;i++){
-
+    for (let i = 0; i < games.length; i++) {
+        let teamValue: number = Number(games[i][0])
+        let oponentValue: number = Number(games[i][2])
+        if(teamValue > oponentValue){
+            score += 3
+        }else if(teamValue < oponentValue){
+            score += 0
+        }else if(teamValue === oponentValue){
+            score += 1
+        }
     }
 
-    return 0 // your code here
+    return score // your code here
 }
 
 points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3'])
