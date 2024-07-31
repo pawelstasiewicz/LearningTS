@@ -15,5 +15,19 @@ exports.oddOrEven = void 0;
 // Have fun!
 function oddOrEven(array) {
     // enter code here
+    var value = 0;
+    array.map(function (e) {
+        value += e;
+    });
+    if (value === 0 || value === undefined) {
+        return "even";
+    }
+    else if (value % 2 === 0) {
+        return "even";
+    }
+    else if (value % 2 !== 0) {
+        return "odd";
+    }
 }
 exports.oddOrEven = oddOrEven;
+oddOrEven([0]);

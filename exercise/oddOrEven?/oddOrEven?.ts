@@ -20,4 +20,20 @@
 
 export function oddOrEven(array: number[]) {
     // enter code here
+
+    let value: number = 0
+
+    array.map(e =>{
+      value += e
+    })
+
+    if(value === 0 || value === undefined){
+      return "even"
+    }else if(value % 2 === 0){
+      return "even"
+    }else if(value % 2 !== 0){
+      return "odd"
+    }
   }
+
+oddOrEven([0])
